@@ -1,8 +1,13 @@
 html,
 body {
   height: 100%;
+  font-family: 'Akshar', sans-serif !important;
 }
 body {
   margin: 0;
   background-color: var(--primary-bg);
+}
+
+* {
+  outline: none;
 }

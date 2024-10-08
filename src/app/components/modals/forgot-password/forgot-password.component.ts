@@ -10,11 +10,14 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { FormErrorPipe } from '@app/pipes/form-error.pipe';
 import { AuthService } from '@app/services/auth.service';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MessageService } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { IconFieldModule } from 'primeng/iconfield';
+import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
 import { RippleModule } from 'primeng/ripple';
 
@@ -25,9 +28,12 @@ import { RippleModule } from 'primeng/ripple';
     FormsModule,
     ReactiveFormsModule,
     ButtonModule,
+    IconFieldModule,
+    InputIconModule,
     InputTextModule,
     TranslateModule,
     RippleModule,
+    FormErrorPipe,
   ],
   templateUrl: './forgot-password.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,

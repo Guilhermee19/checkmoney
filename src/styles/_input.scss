@@ -1,6 +1,20 @@
 @import 'animations';
 
 form {
+  .card-input {
+    input,
+    textarea {
+      width: 100%;
+      border-radius: 10px;
+      font-size: 14px;
+      padding: 0.8rem 0.75rem;
+      color: var(--text-color);
+      box-shadow: var(--shadow);
+      background-color: var(--tertiary-bg);
+      border-color: var(--tertiary-bg);
+    }
+  }
+
   .buttons {
     margin-top: 1rem;
   }
@@ -28,7 +42,7 @@ form {
     &.ng-touched {
       .p-inputtext,
       &.p-inputtext {
-        border-color: #fca5a5;
+        border-color: #fb5151;
         @include shake;
       }
     }

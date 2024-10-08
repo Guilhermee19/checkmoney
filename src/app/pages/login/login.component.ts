@@ -20,6 +20,7 @@ import { FormErrorPipe } from '@app/pipes/form-error.pipe';
 import { AuthService } from '@app/services/auth.service';
 import { BodyJson } from '@app/services/http.service';
 import { StorageService } from '@app/services/storage.service';
+import { environment } from '@env';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ConfirmationService } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
@@ -27,16 +28,19 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { DividerModule } from 'primeng/divider';
 import { DialogService } from 'primeng/dynamicdialog';
+import { IconFieldModule } from 'primeng/iconfield';
+import { InputIconModule } from 'primeng/inputicon';
 import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { RippleModule } from 'primeng/ripple';
-
 @Component({
   selector: 'app-login',
   standalone: true,
   imports: [
     CheckboxModule,
     ButtonModule,
+    IconFieldModule,
+    InputIconModule,
     InputTextModule,
     RippleModule,
     DividerModule,
@@ -64,6 +68,8 @@ export class LoginComponent implements OnInit {
   private translateService = inject(TranslateService);
   private authService = inject(AuthService);
   private router = inject(Router);
+
+  public version = environment.version;
 
   public form = this.fb.group({
     email: ['', [Validators.required, Validators.email]],

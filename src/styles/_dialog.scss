@@ -3,3 +3,10 @@
     --mdc-dialog-supporting-text-line-height: 1rem;
   }
 }
+
+.p-dialog {
+  .p-dialog-header,
+  .p-dialog-content {
+    background: var(--primary-bg);
+  }
+}
